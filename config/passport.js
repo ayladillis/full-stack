@@ -1,4 +1,6 @@
+// these are the dependencies 
 var passport = require("passport");
+// Passport is a middleware run through node that is compatible with express, it functions as an authentication package, it is flexible and easily manipulated by developers.
 var LocalStrategy = require("passport-local").Strategy;
 
 var db = require("../models");
@@ -19,7 +21,7 @@ passport.use(new LocalStrategy(
       // If there's no user with the given email
       if (!dbUser) {
         return done(null, false, {
-          message: "Incorrect email."
+          message: "Incorrect email." //this message is shown 
         });
       }
       // If there is a user with the given email, but the password the user gives us is incorrect

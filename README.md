@@ -16,15 +16,15 @@ Reverse engineer the starter code provided and create a tutorial for the code.
 
 ## Deploy Link
 
-
+https://docs.google.com/document/d/1dIy5BbzDeA3pq0lN3_VC6xHJV4W34sxKlD-0PZz1JXg/edit?usp=sharing
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ```
-$ git clone 
-
-$ cd 
+$ git clone git@github.com:ayladillis/full-stack.git
+ayladillis/full-stack.git
+$ cd ayladillis/full-stack.git
 ```
 Then open in your preferred text editor:
 - [vim](https://www.vim.org/) 

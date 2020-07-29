@@ -1,8 +1,8 @@
 'use strict';
 
-var fs        = require('fs');
-var path      = require('path');
-var Sequelize = require('sequelize');
+var fs        = require('fs'); // allows you to work with the file system on you're computer
+var path      = require('path'); // the path module is used when working with file and directory paths
+var Sequelize = require('sequelize'); // features transaction support, relations, eager and lazy loading
 var basename  = path.basename(module.filename);
 var env       = process.env.NODE_ENV || 'development';
 var config    = require(__dirname + '/../config/config.json')[env];
