@@ -3,10 +3,10 @@
 var fs        = require('fs'); // allows you to work with the file system on you're computer
 var path      = require('path'); // the path module is used when working with file and directory paths
 var Sequelize = require('sequelize'); // features transaction support, relations, eager and lazy loading
-var basename  = path.basename(module.filename);
-var env       = process.env.NODE_ENV || 'development';
-var config    = require(__dirname + '/../config/config.json')[env];
-var db        = {};
+var basename  = path.basename(module.filename); // the basename method returns the last portion of a path
+var env       = process.env.NODE_ENV || 'development'; // represents the state of the system environment your application is in when it starts
+var config    = require(__dirname + '/../config/config.json')[env]; // returning a js object 
+var db        = {}; // setting the database variable equal to an empty object 
 
 if (config.use_env_variable) {
   var sequelize = new Sequelize(process.env[config.use_env_variable]);
