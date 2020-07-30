@@ -15,21 +15,21 @@ module.exports = function(app) {
   // otherwise send back an error
   app.post("/api/signup", function(req, res) {
     db.User.create({
-      email: req.body.email,
-      password: req.body.password
+      email: req.body.email, // takes the users email input and stores it
+      password: req.body.password // takes the user password input and stores it
     })
       .then(function() {
-        res.redirect(307, "/api/login");
+        res.redirect(307, "/api/login"); // redirects to the login page
       })
       .catch(function(err) {
-        res.status(401).json(err);
+        res.status(401).json(err); // if the username and password are not created successfully then an 401 error will show
       });
   });
 
   // Route for logging user out
   app.get("/logout", function(req, res) {
     req.logout();
-    res.redirect("/");
+    res.redirect("/"); // routes back to the root when the user logs out
   });
 
   // Route for getting some data about our user to be used client side

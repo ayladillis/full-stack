@@ -1,6 +1,6 @@
 # full-stack
 
-![gif demo]()
+![gif demo](https://media.giphy.com/media/SwaHXcyLnXTmSMif8z/giphy.gif)
 
 ## Table of Content
 - Objective
@@ -32,9 +32,14 @@ Then open in your preferred text editor:
 - [visual studio code](https://code.visualstudio.com/) 
 
 ## Code Highlight
+The code snippet below is from the user folder within the user.js file, this code introduced the bcrypt function it encripts user information, in this case the username and password. 
 
+![code screenshot](./img/img.png)
 
-![code screenshot]()
+As seen in the routes folder from the html-routes.js file this code highlights the use of the 'isAuthenticate' middleware function. Its purpose here is to run before the members route is run and if the user is not logged in then they will redirected to the signup page because of the middleware isAuthenticated. 
+
+![code screenshot](./img/img2.png)
+
 
 
 ## Technology

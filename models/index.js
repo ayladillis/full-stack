@@ -9,13 +9,13 @@ var config    = require(__dirname + '/../config/config.json')[env]; // returning
 var db        = {}; // setting the database variable equal to an empty object 
 
 if (config.use_env_variable) {
-  var sequelize = new Sequelize(process.env[config.use_env_variable]);
+  var sequelize = new Sequelize(process.env[config.use_env_variable]); // if user already has an account
 } else {
-  var sequelize = new Sequelize(config.database, config.username, config.password, config);
+  var sequelize = new Sequelize(config.database, config.username, config.password, config); // else if user needs to create an account 
 }
 
 fs
-  .readdirSync(__dirname)
+  .readdirSync(__dirname) // synchronously reads the content of a directory 
   .filter(function(file) {
     return (file.indexOf('.') !== 0) && (file !== basename) && (file.slice(-3) === '.js');
   })

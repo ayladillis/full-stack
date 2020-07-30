@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(document).ready(function() { // jquery function to get login page ready
   // Getting references to our form and inputs
   var loginForm = $("form.login");
   var emailInput = $("input#email-input");
@@ -25,11 +25,11 @@ $(document).ready(function() {
   // loginUser does a post to our "api/login" route and if successful, redirects us the the members page
   function loginUser(email, password) {
     $.post("/api/login", {
-      email: email,
+      email: email, // if email and password are correct then the user will be redirected to memebers page
       password: password
     })
       .then(function() {
-        window.location.replace("/members");
+        window.location.replace("/members"); // path to the memebers page 
         // If there's an error, log the error
       })
       .catch(function(err) {
